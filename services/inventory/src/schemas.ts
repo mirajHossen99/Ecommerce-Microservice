@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ActionType } from "../prisma/generated/prisma/enums";
 
 export const InventoryCreateDTOSchema = z.object({
     productId: z.string(),
@@ -8,3 +9,9 @@ export const InventoryCreateDTOSchema = z.object({
 });
 
 export type InventoryCreateDTO = z.infer<typeof InventoryCreateDTOSchema>;
+
+
+export const InventoryUpdateDTOSchema = z.object({
+    quantity: z.number().int(),
+    actionType: z.nativeEnum(ActionType),
+});

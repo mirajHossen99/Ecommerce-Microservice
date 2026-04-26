@@ -397,10 +397,6 @@ export type InventoryUpdateOneRequiredWithoutHistoriesNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.InventoryUpdateToOneWithWhereWithoutHistoriesInput, Prisma.InventoryUpdateWithoutHistoriesInput>, Prisma.InventoryUncheckedUpdateWithoutHistoriesInput>
 }
 
-export type DateTimeFieldUpdateOperationsInput = {
-  set?: Date | string
-}
-
 export type InventoryCreateWithoutHistoriesInput = {
   id?: string
   sku: string
