@@ -598,7 +598,9 @@ export const HistoryScalarFieldEnum = {
   quantityChanged: 'quantityChanged',
   lastQuantity: 'lastQuantity',
   newQuantity: 'newQuantity',
-  inventoryId: 'inventoryId'
+  inventoryId: 'inventoryId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 } as const
 
 export type HistoryScalarFieldEnum = (typeof HistoryScalarFieldEnum)[keyof typeof HistoryScalarFieldEnum]

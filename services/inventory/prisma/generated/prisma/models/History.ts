@@ -45,6 +45,8 @@ export type HistoryMinAggregateOutputType = {
   lastQuantity: number | null
   newQuantity: number | null
   inventoryId: string | null
+  createdAt: Date | null
+  updatedAt: Date | null
 }
 
 export type HistoryMaxAggregateOutputType = {
@@ -54,6 +56,8 @@ export type HistoryMaxAggregateOutputType = {
   lastQuantity: number | null
   newQuantity: number | null
   inventoryId: string | null
+  createdAt: Date | null
+  updatedAt: Date | null
 }
 
 export type HistoryCountAggregateOutputType = {
@@ -63,6 +67,8 @@ export type HistoryCountAggregateOutputType = {
   lastQuantity: number
   newQuantity: number
   inventoryId: number
+  createdAt: number
+  updatedAt: number
   _all: number
 }
 
@@ -86,6 +92,8 @@ export type HistoryMinAggregateInputType = {
   lastQuantity?: true
   newQuantity?: true
   inventoryId?: true
+  createdAt?: true
+  updatedAt?: true
 }
 
 export type HistoryMaxAggregateInputType = {
@@ -95,6 +103,8 @@ export type HistoryMaxAggregateInputType = {
   lastQuantity?: true
   newQuantity?: true
   inventoryId?: true
+  createdAt?: true
+  updatedAt?: true
 }
 
 export type HistoryCountAggregateInputType = {
@@ -104,6 +114,8 @@ export type HistoryCountAggregateInputType = {
   lastQuantity?: true
   newQuantity?: true
   inventoryId?: true
+  createdAt?: true
+  updatedAt?: true
   _all?: true
 }
 
@@ -200,6 +212,8 @@ export type HistoryGroupByOutputType = {
   lastQuantity: number
   newQuantity: number
   inventoryId: string
+  createdAt: Date
+  updatedAt: Date
   _count: HistoryCountAggregateOutputType | null
   _avg: HistoryAvgAggregateOutputType | null
   _sum: HistorySumAggregateOutputType | null
@@ -232,6 +246,8 @@ export type HistoryWhereInput = {
   lastQuantity?: Prisma.IntFilter<"History"> | number
   newQuantity?: Prisma.IntFilter<"History"> | number
   inventoryId?: Prisma.StringFilter<"History"> | string
+  createdAt?: Prisma.DateTimeFilter<"History"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"History"> | Date | string
   inventory?: Prisma.XOR<Prisma.InventoryScalarRelationFilter, Prisma.InventoryWhereInput>
 }
 
@@ -242,6 +258,8 @@ export type HistoryOrderByWithRelationInput = {
   lastQuantity?: Prisma.SortOrder
   newQuantity?: Prisma.SortOrder
   inventoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
   inventory?: Prisma.InventoryOrderByWithRelationInput
 }
 
@@ -255,6 +273,8 @@ export type HistoryWhereUniqueInput = Prisma.AtLeast<{
   lastQuantity?: Prisma.IntFilter<"History"> | number
   newQuantity?: Prisma.IntFilter<"History"> | number
   inventoryId?: Prisma.StringFilter<"History"> | string
+  createdAt?: Prisma.DateTimeFilter<"History"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"History"> | Date | string
   inventory?: Prisma.XOR<Prisma.InventoryScalarRelationFilter, Prisma.InventoryWhereInput>
 }, "id">
 
@@ -265,6 +285,8 @@ export type HistoryOrderByWithAggregationInput = {
   lastQuantity?: Prisma.SortOrder
   newQuantity?: Prisma.SortOrder
   inventoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
   _count?: Prisma.HistoryCountOrderByAggregateInput
   _avg?: Prisma.HistoryAvgOrderByAggregateInput
   _max?: Prisma.HistoryMaxOrderByAggregateInput
@@ -282,6 +304,8 @@ export type HistoryScalarWhereWithAggregatesInput = {
   lastQuantity?: Prisma.IntWithAggregatesFilter<"History"> | number
   newQuantity?: Prisma.IntWithAggregatesFilter<"History"> | number
   inventoryId?: Prisma.StringWithAggregatesFilter<"History"> | string
+  createdAt?: Prisma.DateTimeWithAggregatesFilter<"History"> | Date | string
+  updatedAt?: Prisma.DateTimeWithAggregatesFilter<"History"> | Date | string
 }
 
 export type HistoryCreateInput = {
@@ -290,6 +314,8 @@ export type HistoryCreateInput = {
   quantityChanged: number
   lastQuantity: number
   newQuantity: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
   inventory: Prisma.InventoryCreateNestedOneWithoutHistoriesInput
 }
 
@@ -300,6 +326,8 @@ export type HistoryUncheckedCreateInput = {
   lastQuantity: number
   newQuantity: number
   inventoryId: string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type HistoryUpdateInput = {
@@ -308,6 +336,8 @@ export type HistoryUpdateInput = {
   quantityChanged?: Prisma.IntFieldUpdateOperationsInput | number
   lastQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   newQuantity?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   inventory?: Prisma.InventoryUpdateOneRequiredWithoutHistoriesNestedInput
 }
 
@@ -318,6 +348,8 @@ export type HistoryUncheckedUpdateInput = {
   lastQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   newQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   inventoryId?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type HistoryCreateManyInput = {
@@ -327,6 +359,8 @@ export type HistoryCreateManyInput = {
   lastQuantity: number
   newQuantity: number
   inventoryId: string
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type HistoryUpdateManyMutationInput = {
@@ -335,6 +369,8 @@ export type HistoryUpdateManyMutationInput = {
   quantityChanged?: Prisma.IntFieldUpdateOperationsInput | number
   lastQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   newQuantity?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type HistoryUncheckedUpdateManyInput = {
@@ -344,6 +380,8 @@ export type HistoryUncheckedUpdateManyInput = {
   lastQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   newQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   inventoryId?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type HistoryCountOrderByAggregateInput = {
@@ -353,6 +391,8 @@ export type HistoryCountOrderByAggregateInput = {
   lastQuantity?: Prisma.SortOrder
   newQuantity?: Prisma.SortOrder
   inventoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
 }
 
 export type HistoryAvgOrderByAggregateInput = {
@@ -368,6 +408,8 @@ export type HistoryMaxOrderByAggregateInput = {
   lastQuantity?: Prisma.SortOrder
   newQuantity?: Prisma.SortOrder
   inventoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
 }
 
 export type HistoryMinOrderByAggregateInput = {
@@ -377,6 +419,8 @@ export type HistoryMinOrderByAggregateInput = {
   lastQuantity?: Prisma.SortOrder
   newQuantity?: Prisma.SortOrder
   inventoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  updatedAt?: Prisma.SortOrder
 }
 
 export type HistorySumOrderByAggregateInput = {
@@ -409,6 +453,10 @@ export type IntFieldUpdateOperationsInput = {
   decrement?: number
   multiply?: number
   divide?: number
+}
+
+export type DateTimeFieldUpdateOperationsInput = {
+  set?: Date | string
 }
 
 export type HistoryCreateNestedManyWithoutInventoryInput = {
@@ -459,6 +507,8 @@ export type HistoryCreateWithoutInventoryInput = {
   quantityChanged: number
   lastQuantity: number
   newQuantity: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type HistoryUncheckedCreateWithoutInventoryInput = {
@@ -467,6 +517,8 @@ export type HistoryUncheckedCreateWithoutInventoryInput = {
   quantityChanged: number
   lastQuantity: number
   newQuantity: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type HistoryCreateOrConnectWithoutInventoryInput = {
@@ -505,6 +557,8 @@ export type HistoryScalarWhereInput = {
   lastQuantity?: Prisma.IntFilter<"History"> | number
   newQuantity?: Prisma.IntFilter<"History"> | number
   inventoryId?: Prisma.StringFilter<"History"> | string
+  createdAt?: Prisma.DateTimeFilter<"History"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"History"> | Date | string
 }
 
 export type HistoryCreateManyInventoryInput = {
@@ -513,6 +567,8 @@ export type HistoryCreateManyInventoryInput = {
   quantityChanged: number
   lastQuantity: number
   newQuantity: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
 }
 
 export type HistoryUpdateWithoutInventoryInput = {
@@ -521,6 +577,8 @@ export type HistoryUpdateWithoutInventoryInput = {
   quantityChanged?: Prisma.IntFieldUpdateOperationsInput | number
   lastQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   newQuantity?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type HistoryUncheckedUpdateWithoutInventoryInput = {
@@ -529,6 +587,8 @@ export type HistoryUncheckedUpdateWithoutInventoryInput = {
   quantityChanged?: Prisma.IntFieldUpdateOperationsInput | number
   lastQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   newQuantity?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type HistoryUncheckedUpdateManyWithoutInventoryInput = {
@@ -537,6 +597,8 @@ export type HistoryUncheckedUpdateManyWithoutInventoryInput = {
   quantityChanged?: Prisma.IntFieldUpdateOperationsInput | number
   lastQuantity?: Prisma.IntFieldUpdateOperationsInput | number
   newQuantity?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 
@@ -548,6 +610,8 @@ export type HistorySelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   lastQuantity?: boolean
   newQuantity?: boolean
   inventoryId?: boolean
+  createdAt?: boolean
+  updatedAt?: boolean
   inventory?: boolean | Prisma.InventoryDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["history"]>
 
@@ -558,6 +622,8 @@ export type HistorySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   lastQuantity?: boolean
   newQuantity?: boolean
   inventoryId?: boolean
+  createdAt?: boolean
+  updatedAt?: boolean
   inventory?: boolean | Prisma.InventoryDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["history"]>
 
@@ -568,6 +634,8 @@ export type HistorySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   lastQuantity?: boolean
   newQuantity?: boolean
   inventoryId?: boolean
+  createdAt?: boolean
+  updatedAt?: boolean
   inventory?: boolean | Prisma.InventoryDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["history"]>
 
@@ -578,9 +646,11 @@ export type HistorySelectScalar = {
   lastQuantity?: boolean
   newQuantity?: boolean
   inventoryId?: boolean
+  createdAt?: boolean
+  updatedAt?: boolean
 }
 
-export type HistoryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "actionType" | "quantityChanged" | "lastQuantity" | "newQuantity" | "inventoryId", ExtArgs["result"]["history"]>
+export type HistoryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "actionType" | "quantityChanged" | "lastQuantity" | "newQuantity" | "inventoryId" | "createdAt" | "updatedAt", ExtArgs["result"]["history"]>
 export type HistoryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   inventory?: boolean | Prisma.InventoryDefaultArgs<ExtArgs>
 }
@@ -603,6 +673,8 @@ export type $HistoryPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     lastQuantity: number
     newQuantity: number
     inventoryId: string
+    createdAt: Date
+    updatedAt: Date
   }, ExtArgs["result"]["history"]>
   composites: {}
 }
@@ -1033,6 +1105,8 @@ export interface HistoryFieldRefs {
   readonly lastQuantity: Prisma.FieldRef<"History", 'Int'>
   readonly newQuantity: Prisma.FieldRef<"History", 'Int'>
   readonly inventoryId: Prisma.FieldRef<"History", 'String'>
+  readonly createdAt: Prisma.FieldRef<"History", 'DateTime'>
+  readonly updatedAt: Prisma.FieldRef<"History", 'DateTime'>
 }
     
 
