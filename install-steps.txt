@@ -10,9 +10,14 @@ yarn add @prisma/client
 yarn prisma init
 yarn prisma generate
 
-migrate:
+
+  -- Prisma --
+
+Migrate:
 yarn migrate:dev
 
+Reset:
+yarn prisma migrate reset
 
 
 ----  inventory ---- End
@@ -32,5 +37,12 @@ sudo systemctl restart docker
 docker compose up -d
 docker ps
 docker inspect postgres
+
+
+   -- Remove image--
+
+sudo docker rm -f postgres
+sudo docker rm -f pgadmin
+
 
 ---- Docker ---- End
