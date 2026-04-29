@@ -12,7 +12,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password123
-      POSTGRES_DB: practical_ms
+      POSTGRES_DB: Ecommerce-Microservice
     ports:
       - '5432:5432'
     volumes:
