@@ -1,1 +1,4 @@
-# Practical-Microservice
+# Ecommerce-Microservice
+
+## Inventory
+## Product
