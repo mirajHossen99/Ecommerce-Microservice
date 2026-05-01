@@ -76,6 +76,8 @@ Copy the src folder to User or any service
 Modify the all or any file on depend requirements
 
 yarn
+yarn add bcryptjs jsonwebtoken
+yarn add -D @types/bcryptjs
 
  -- Pirsma --
  
