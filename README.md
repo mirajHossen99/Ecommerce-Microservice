@@ -1,4 +1,9 @@
 # Ecommerce-Microservice
 
-## Inventory
-## Product
+## API Gateway
+
+## Service
+
+### Inventory
+### Product
+### User
