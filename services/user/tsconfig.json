@@ -19,6 +19,7 @@
         "types": ["node", "express"],
         "noImplicitAny": false,
         "baseUrl": "./src",
+        "ignoreDeprecations": "6.0",
         "paths": {
             "@/*": ["*"]
         }
