@@ -1,4 +1,4 @@
-import e, { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express";
 import { prisma } from "@/prisma";
 
 const getEmails = async (_req: Request, res: Response, next: NextFunction) => {
