@@ -1,4 +1,3 @@
-import { access } from "node:fs";
 import { z } from "zod";
 
 export const UserCreateDTOSchema = z.object({
