@@ -10,3 +10,7 @@ export const UserLoginDTOSchema = z.object({
   email: z.string().email(),
   password: z.string(),
 });
+
+export const AccessTokenDTOSchema = z.object({
+  accessToken: z.string(),
+});
