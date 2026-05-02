@@ -1,3 +1,4 @@
+import { access } from "node:fs";
 import { z } from "zod";
 
 export const UserCreateDTOSchema = z.object({
@@ -9,4 +10,8 @@ export const UserCreateDTOSchema = z.object({
 export const UserLoginDTOSchema = z.object({
   email: z.string().email(),
   password: z.string(),
+});
+
+export const AccessTokenDTOSchema = z.object({
+  accessToken: z.string(),
 });
