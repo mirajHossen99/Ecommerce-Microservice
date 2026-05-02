@@ -4,7 +4,6 @@ import cors from "cors";
 import morgan from "morgan";
 import { userLogin, userRegistration, verifyAccessToken } from "./controllers";
 
-
 dotenv.config();
 
 const app = express();
