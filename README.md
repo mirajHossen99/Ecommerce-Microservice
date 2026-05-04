@@ -39,7 +39,7 @@ Below is the routing table currently managed by the Gateway:
 | :--- | :--- | :--- | :--- |
 | `/api/v1/auth/register` | `POST` | None | User account creation |
 | `/api/v1/auth/login` | `POST` | None | Credential authentication |
-| `/api/v1/auth/verify-emails` | `POST` | None | Email Verification |
+| `/api/v1/auth/verify-email` | `POST` | None | Email Verification |
 | `/api/v1/auth/verify-token` | `POST` | None | Session validation |
 
 
