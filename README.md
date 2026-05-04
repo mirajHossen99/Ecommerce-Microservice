@@ -30,7 +30,7 @@ The Gateway acts as a reverse proxy for the following specialized services:
 
 ---
 
-### 🚦 Endpoint Directory
+### Endpoint Directory
 
 Below is the routing table currently managed by the Gateway:
 
