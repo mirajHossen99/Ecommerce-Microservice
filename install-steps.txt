@@ -116,6 +116,22 @@ yarn prisma generate
 
 ---- Email ---- End
 
+yarn add ioredis
+yarn add -D @types/ioredis
+
+------------------------------------------------------
+
+---- Cart ---- Start
+
+Copy the .env, gitignore, package.json, tsconfig.json file to API-Gateway
+Copy the src/index.ts folder to email or any service
+Modify the all file on depend requirements.
+
+yarn
+yarn add ioredis
+
+---- Cart ---- End
+
 ------------------------------------------------------
 
 ---- API Gateway ---- Start
