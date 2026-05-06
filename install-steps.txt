@@ -137,6 +137,28 @@ yarn add -D @types/uuid
 
 ------------------------------------------------------
 
+---- Order ---- Start
+
+Copy the .env, gitignore, package.json, tsconfig.json file to Product
+Copy the src/index.ts folder to Product
+Modify the all file on depend requirements.
+
+yarn
+
+ -- Pirsma --
+ 
+yarn prisma init
+
+Migrate:
+yarn migrate:dev
+
+generate:
+yarn prisma generate
+
+---- Order ---- End
+
+------------------------------------------------------
+
 ---- API Gateway ---- Start
 
 Copy the .env, gitignore, package.json, tsconfig.json file to Product
